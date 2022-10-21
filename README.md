@@ -1,20 +1,24 @@
-# Homework 3 - Virtual environment research
+# Homework 2 - Virtual environment research
 
 This instruction explains how to easily reproduce one of the results of the stunning virtual environment research presented in groundbreaking article, which is avalible at doi:10.1111/1000-7 
 
 OS: Ubuntu 20.04.2 LTS
 
-### 1. Download repository with scripts from github
+### 1. Create new folder and download repository with scripts from github
 
 SSH:
 
 ```bash
+mkdir venv_research
+cd venv_research
 git clone git@github.com:krglkvrmn/Virtual_environment_research.git
 ```
 
 HTTPS:
 
 ```bash
+mkdir venv_research
+cd venv_research
 https://github.com/krglkvrmn/Virtual_environment_research.git
 ```
 
@@ -26,14 +30,18 @@ sudo apt install python3.11
 sudo apt install python3.11-dev python3.11-venv -y
 ```
 
-### 3. Create python virtual environment with Python 3.11 version and activate it
+### 3. Create python virtual environment with Python 3.11 version and activate it (don’t forget deactivate your current environment)
 
 ```bash
-python3.11 -m venv <env_name>
-source ./<env_name>/bin/activate
+deactivate # or 'conda deactivate' if you use conda environment
 ```
 
-### 4. Install required modules and run ultraviolence.py
+```bash
+python3.11 -m venv venv_research_env
+source ./venv_research_env/bin/activate
+```
+
+### 4. Download modules required for running ultraviolence.py
 
 - Install modules using requirements.txt file from this repository
 
@@ -41,10 +49,9 @@ source ./<env_name>/bin/activate
 pip install -r requirements.txt
 ```
 
-      or use pip 
+- or use pip
 
 ```bash
-pip install google
 pip install --upgrade google-api-python-client
 pip install biopython
 pip install aiohttp
@@ -53,7 +60,15 @@ pip install opencv-python
 pip install lxml
 ```
 
-- Find lines [635:638] in [frame.py](http://frame.py) file located in “./<env_name>/lib/python3.11/site-packages/pandas/core/” and replace those lines with lines below (or make a comment from them yourself)
+### 4. Edit [frame.py](http://frame.py) file from pandas
+
+- Open [frame.py](http://frame.py) file in prefered text redactor (in this exmple we use gedit)
+
+```bash
+gedit venv_research_env/lib/python3.11/site-packages/pandas/core/frame.py
+```
+
+- Find lines [635:638] in [frame.py](http://frame.py/) and replace those lines with those above (or make a comment from those line youself)
 
 ```python
 #		if index is not None and isinstance(index, set):
@@ -62,8 +77,9 @@ pip install lxml
 #			raise ValueError("columns cannot be a set")
 ```
 
-- Run [ultraviolence.py](http://ultraviolence.py)
+### 5. Run [ultraviolence.py](http://ultraviolence.py)
 
 ```bash
+cd Virtual_environment_research/
 python3.11 ultraviolence.py
 ```
