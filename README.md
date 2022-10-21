@@ -41,9 +41,9 @@ python3.11 -m venv venv_research_env
 source ./venv_research_env/bin/activate
 ```
 
-### 4. Download modules required for running ultraviolence.py
+### 4. Download and install modules required for running ultraviolence.py
 
-- Install modules using requirements.txt file from this repository
+- Install modules using requirements.txt downloaded file from this repository
 
 ```bash
 pip install -r requirements.txt
