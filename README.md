@@ -30,7 +30,7 @@ sudo apt install python3.11
 sudo apt install python3.11-dev python3.11-venv -y
 ```
 
-### 3. Create python virtual environment with Python 3.11 version and activate it (don’t forget deactivate your current environment)
+### 3. Create python virtual environment with Python 3.11 version and activate it (don’t forget to deactivate your current environment)
 
 ```bash
 deactivate # or 'conda deactivate' if you use conda environment
