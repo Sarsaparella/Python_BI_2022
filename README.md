@@ -43,7 +43,7 @@ source ./venv_research_env/bin/activate
 
 ### 4. Download and install modules required for running ultraviolence.py
 
-- Install modules using requirements.txt downloaded file from this repository
+- Install modules using requirements.txt file downloaded from this repository
 
 ```bash
 pip install -r requirements.txt
