@@ -68,7 +68,7 @@ pip install lxml
 gedit venv_research_env/lib/python3.11/site-packages/pandas/core/frame.py
 ```
 
-- Find lines [635:638] in [frame.py](http://frame.py/) and replace those lines with those above (or make a comment from those line youself)
+- Find lines [635:638] in [frame.py](http://frame.py/) and replace those lines with lines below (or make a comment from those line youself)
 
 ```python
 #		if index is not None and isinstance(index, set):
