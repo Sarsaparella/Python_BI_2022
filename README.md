@@ -1,4 +1,4 @@
-# Homework 2 - Virtual environment research
+# Homework 3 - Virtual environment research
 
 This instruction explains how to easily reproduce one of the results of the stunning virtual environment research presented in groundbreaking article, which is avalible at doi:10.1111/1000-7 
 
